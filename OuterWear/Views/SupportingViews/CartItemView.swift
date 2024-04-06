@@ -1,18 +1,46 @@
-//
-//  CartItemView.swift
-//  OuterWear
-//
-//  Created by NIBM-LAB04-PC07 on 2024-04-03.
-//
-
 import SwiftUI
 
 struct CartItemView: View {
+//    @EnvironmentObject var cartManager: CartManager
+//    var product: ProductModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+//        HStack(spacing: 20) {
+//            Image(product.image)
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 70)
+//                .cornerRadius(9)
+//
+//            VStack(alignment: .leading, spacing: 5) {
+                Text("product.title")
+//                    .bold()
+//
+//                Text("LKR \(product.price)")
+//                    .bold()
+//                }
+//                .padding()
+//
+//
+//
+//                Spacer()
+//
+//                Image(systemName: "trash")
+//                    .foregroundColor(.red)
+//                    .onTapGesture {
+//                        cartManager.removeFromCart(product: product)
+//                    }
+//            }
+//            .padding(.horizontal)
+//            .background(Color(.lightGray))
+//            .cornerRadius(12)
+//            .frame(width: .infinity, alignment: .leading)
+//            .padding()
+        }
 }
 
-#Preview {
-    CartItemView()
+struct CartItemView_Previews: PreviewProvider {
+    static var previews: some View {
+        CartItemView()
+//            .environmentObject(CartManager())
+    }
 }

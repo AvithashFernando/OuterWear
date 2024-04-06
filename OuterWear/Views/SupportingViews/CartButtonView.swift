@@ -1,18 +1,34 @@
 //
 //  CartButtonView.swift
-//  OuterWear
+//  OnlineClothing
 //
-//  Created by NIBM-LAB04-PC07 on 2024-04-03.
+//  Created by NIBM-LAB04-PC07 on 2024-03-31.
 //
 
 import SwiftUI
 
 struct CartButtonView: View {
+//    var numberOfProducts: Int
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//        ZStack(alignment: .topTrailing) {
+            Image(systemName: "bag.fill")
+                .foregroundColor(.black)
+                .padding(5)
+//            if numberOfProducts > 0 {
+//                    Text("\(numberOfProducts)")
+//                        .font(.caption)
+//                        .foregroundColor(.white)
+//                        .frame(width: 15, height: 15)
+//                        .background(.red)
+//                        .cornerRadius(50)
+//            }
+//        }
     }
 }
 
-#Preview {
-    CartButtonView()
+struct CartButtonView_Preview: PreviewProvider {
+    static var previews: some View {
+        CartButtonView()
+//            .environmentObject(CartManager())
+    }
 }

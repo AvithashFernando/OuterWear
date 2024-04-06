@@ -23,27 +23,27 @@ struct ContentView: View {
             HomeView()
 
             Text("Home View")
-                .frame(maxWidth: .infinity, maxHight: .infinity)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background()
                 .tag(Tab.Home)
 
             Text("Search View")
-                .frame(maxWidth: .infinity, maxHight: .infinity)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background()
                 .tag(Tab.Search)
 
             Text("Notification View")
-                .frame(maxWidth: .infinity, maxHight: .infinity)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background()
-                .tag(Tab.Notification)
+                .tag(Tab.Notifications)
 
             Text("Cart View")
-                .frame(maxWidth: .infinity, maxHight: .infinity)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background()
                 .tag(Tab.Cart)
 
             Text("Profile View")
-                .frame(maxWidth: .infinity, maxHight: .infinity)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background()
                 .tag(Tab.Profile)
         }
@@ -54,10 +54,10 @@ struct ContentView: View {
                 }
                 .padding(.vertical)
                 .padding(.bottom, getSafeArea().bottom == 0 ? 5 : (getSafeArea().bottom - 15))
-                .background(Color(.white))
+                .background(Color(.orange))
             }
             ,
-            alignment: bottom
+            alignment: .bottom
         ).ignoresSafeArea(.all, edges: .bottom)
     }
     func TabButton(tab: Tab) -> some View {
@@ -71,7 +71,7 @@ struct ContentView: View {
                 VStack(spacing: 0) {
                     Image(systemName: currentTab == tab ? tab.rawValue + ".fill": tab.rawValue)
                         .resizable()
-                        .foregroundColor(Color(.blue))
+                        .foregroundColor(Color(.black))
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 25, height: 25)
                         .frame(maxWidth: .infinity)
@@ -83,7 +83,7 @@ struct ContentView: View {
                                         .matchedGeometryEffect(id: "Tab", in: animation)
                                     
                                     Text(tab.Tabname)
-                                        .foregroundColor(.primary)
+                                        .foregroundColor(.yellow)
                                         .font(.footnote)
                                         .padding(.top, 50)
                                 }
@@ -106,10 +106,10 @@ struct ContentView_Preview: PreviewProvider {
 
 enum Tab: String, CaseIterable {
     case Home = "house"
-    case Home = "magnifyingglass.circle"
-    case Home = "bell"
-    case Home = "bag"
-    case Home = "person"
+    case Search = "magnifyingglass.circle"
+    case Notifications = "bell"
+    case Cart = "bag"
+    case Profile = "person"
 
     var Tabname: String {
         switch self {
@@ -144,7 +144,7 @@ extension View {
 }
 
 struct MaterialEffect: UIViewRepresentable {
-    var style: UIBlurEffect.style
+    var style: UIBlurEffect.Style
 
     func makeUIView(context: Context) -> UIVisualEffectView {
         let view = UIVisualEffectView(effect: UIBlurEffect(style: style))
