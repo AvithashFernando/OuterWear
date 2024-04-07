@@ -36,7 +36,7 @@ import Foundation
 
 import Foundation
 
-struct ProductModel: Identifiable,Decodable{
+struct ProductModel: Identifiable, Decodable {
     var id: String?
     var title: String
     var price: Double
@@ -46,16 +46,16 @@ struct ProductModel: Identifiable,Decodable{
     var image: [String]
     var color: [String]
     var size: [String]
-}
 
-enum CodingKeys: String, CodingKey {
-    case id = "_id"
-    case title = "title"
-    case price = "price"
-    case description = "description"
-    case category = "category"
-    case gender = "gender"
-    case image = "image"
-    case color = "color"
-    case size = "size"
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case title = "title"
+        case price = "price"
+        case description = "description"
+        case category = "category"
+        case gender = "gender"
+        case image = "image"
+        case color = "color"
+        case size = "size"
+    }
 }

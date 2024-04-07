@@ -29,6 +29,8 @@
 		00ADB1042BBD4E6A00056F7E /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADB1032BBD4E6A00056F7E /* PaymentButton.swift */; };
 		00ADB1062BBD4E8E00056F7E /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADB1052BBD4E8E00056F7E /* ProductCardView.swift */; };
 		253C833E2BC25A2900BAFCFD /* SliderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253C833D2BC25A2900BAFCFD /* SliderModel.swift */; };
+		253C83482BC2BD0B00BAFCFD /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253C83472BC2BD0B00BAFCFD /* CategoryModel.swift */; };
+		253C834A2BC2BDCC00BAFCFD /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253C83492BC2BDCC00BAFCFD /* CategoryViewModel.swift */; };
 		25A9BCA72BC1394E00DE0E9A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 25A9BCA62BC1394E00DE0E9A /* Alamofire */; };
 		25A9BCA92BC1394E00DE0E9A /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 25A9BCA82BC1394E00DE0E9A /* AlamofireDynamic */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,8 @@
 		00ADB1032BBD4E6A00056F7E /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
 		00ADB1052BBD4E8E00056F7E /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
 		253C833D2BC25A2900BAFCFD /* SliderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderModel.swift; sourceTree = "<group>"; };
+		253C83472BC2BD0B00BAFCFD /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		253C83492BC2BDCC00BAFCFD /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 			children = (
 				00ADB0DD2BBD42A400056F7E /* ProductModel.swift */,
 				253C833D2BC25A2900BAFCFD /* SliderModel.swift */,
+				253C83472BC2BD0B00BAFCFD /* CategoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				00ADB0E02BBD42E500056F7E /* ProductViewModel.swift */,
+				253C83492BC2BDCC00BAFCFD /* CategoryViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -256,12 +262,14 @@
 				00ADB0F92BBD4D7300056F7E /* ProductDetailsView.swift in Sources */,
 				00ADB0F72BBD4AB400056F7E /* ProductView.swift in Sources */,
 				00ADB0F22BBD43E700056F7E /* HomeView.swift in Sources */,
+				253C834A2BC2BDCC00BAFCFD /* CategoryViewModel.swift in Sources */,
 				00ADB0D12BBD421800056F7E /* ContentView.swift in Sources */,
 				00ADB1062BBD4E8E00056F7E /* ProductCardView.swift in Sources */,
 				00ADB0DE2BBD42A400056F7E /* ProductModel.swift in Sources */,
 				00ADB0FC2BBD4DB000056F7E /* CartView.swift in Sources */,
 				00ADB1022BBD4E3800056F7E /* CategoryView.swift in Sources */,
 				00ADB1042BBD4E6A00056F7E /* PaymentButton.swift in Sources */,
+				253C83482BC2BD0B00BAFCFD /* CategoryModel.swift in Sources */,
 				00ADB0F42BBD441600056F7E /* SearchView.swift in Sources */,
 				00ADB0F02BBD43C400056F7E /* ImageSliderView.swift in Sources */,
 				253C833E2BC25A2900BAFCFD /* SliderModel.swift in Sources */,

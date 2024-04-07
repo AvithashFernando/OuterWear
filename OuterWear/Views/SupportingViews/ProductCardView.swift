@@ -9,63 +9,59 @@ import SwiftUI
 import Kingfisher
 
 struct ProductCardView: View {
-    @EnvironmentObject var productViewModel: ProductViewModel
+    @EnvironmentObject var cartManager: CartManager
+    var product: ProductModel 
     
     var body: some View {
-        if let product = productViewModel.productItems.first {
-            ZStack {
-                Color.gray.opacity(0.2)
-                    .cornerRadius(15)
+        ZStack {
+            Color.orange.opacity(0.8)
+                .cornerRadius(15)
+                .padding(5)
 
-                VStack(alignment: .leading) {
-                    KFImage(URL(string: product.image.first ?? ""))
-                        .resizable()
-                        .placeholder {
-                            Image(systemName: "photo")
-                                .resizable()
-                                .foregroundColor(.blue)
-                        }
-                        .frame(width: 175, height: 160)
-                        .cornerRadius(12)
-
-                    Text(product.title)
-                        .font(.system(size: 15))
-                        .foregroundColor(.black)
-
-                    Text("LKR \(String(format: "%.2f", product.price))")
-                        .foregroundColor(.black)
-                        .bold()
-                        .padding(.bottom, 5)
-
-                    Button(action: {
-                        // Action to add product to cart
-                        print("Added to cart: \(product.title)")
-                    }) {
-                        Text("Add to cart")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding(.vertical, 8)
-                            .padding(.horizontal, 20)
-                            .background(Color.red)
-                            .cornerRadius(10)
+            VStack(alignment: .leading) {
+                KFImage(URL(string: product.image.first ?? ""))
+                    .resizable()
+                    .placeholder {
+                        Image(systemName: "photo")
+                            .resizable()
+                            .foregroundColor(.blue)
                     }
+                    .frame(width: 165, height: 150)
+                    .cornerRadius(12)
+
+                Text(product.title)
+                    .font(.system(size: 15))
+                    .foregroundColor(.black)
+
+                Text("LKR \(String(format: "%.2f", product.price))")
+                    .foregroundColor(.black)
+                    .bold()
+                    .padding(.bottom, 5)
+
+                Button(action: {
+                    // Action to add product to cart
+                    cartManager.addToCart(product: product)
+                }) {
+                    Text("Add to cart")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding(.vertical, 8)
+                        .padding(.horizontal, 20)
+                        .background(Color.red)
+                        .cornerRadius(10)
                 }
-                .padding()
             }
-            .frame(width: 195, height: 300)
-        } else {
-            Text("No product available")
-                .foregroundColor(.red)
+            .padding()
         }
+        .frame(width: 170, height: 280)
     }
 }
 
 struct ProductCardView_Preview: PreviewProvider {
     static var previews: some View {
-        let productViewModel = ProductViewModel()
-        productViewModel.productItems = [ProductModel(title: "Silk Saree with blouse piece", price: 3390, description: "Silk Satin Printed Saree With Matching Blouse Piece.Material:Silk Batik.Weight:400g", category: "Dress", gender: "WOMEN", image: ["https://i.ibb.co/McwjTfM/WD1-01.jpg"],color: ["bLUE"],size: ["M"])]
+        let product = ProductModel(title: "Silk Saree with blouse piece", price: 3390, description: "Silk Satin Printed Saree With Matching Blouse Piece.Material:Silk Batik.Weight:400g", category: "Dress", gender: "WOMEN", image: ["sample_image_url"], color: ["sample_color_url"], size: ["sample_size_url"])
         
-        return ProductCardView()
-            .environmentObject(productViewModel)
+        return ProductCardView(product: product)
+            .environmentObject(ProductViewModel())
     }
 }

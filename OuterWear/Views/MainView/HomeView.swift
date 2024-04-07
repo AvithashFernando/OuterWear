@@ -1,5 +1,6 @@
 import SwiftUI
-import Alamofire
+import Kingfisher
+
 
 struct HomeView: View {
     @StateObject private var productViewModel = ProductViewModel()
@@ -28,38 +29,33 @@ struct HomeView: View {
                         NavigationLink(destination: ProductView()) {
                             Image(systemName: "circle.grid.2x2.fill")
                                 .foregroundColor(Color(.black))
-                            
-                        
                         }
                     }
                     .padding()
 
-                    ScrollView(.horizontal, showsIndicators: false){
-                        HStack(spacing: 10) {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 25) {
                             ForEach(productViewModel.productItems) { product in
-                                NavigationLink {
-//                                    ProductCardView(product: product)
-                                } label: {
-                                    ProductCardView()
+                                NavigationLink(destination: ProductDetailsView(product: product)) {
+                                    ProductCardView(product: product)
+                                    
                                         .environmentObject(cartManager)
                                 }
                             }
                         }
                         .padding(.horizontal)
                     }
-
                 }
             }
         }
         .environmentObject(cartManager)
         .onAppear {
-            Task {
-                print("hello3")
-                productViewModel.fetchData()
-            }
+            productViewModel.fetchData() 
         }
     }
 }
+
+
 
 struct HomeView_Preview: PreviewProvider {
     static var previews: some View {
@@ -86,21 +82,21 @@ struct Header: View {
 
                     Spacer()
 
-//                    NavigationLink(destination: CartView()
-//                        .environmentObject(cartManager)
-//                    ) {
-////                        CartButtonView(numberOfProducts: cartManager.products.count)
-//                    }
+                    NavigationLink(destination: CartView()
+                        .environmentObject(cartManager)
+                    ) {
+                        CartButtonView(numberOfProducts: cartManager.cartItems.count)
+                    }
                 }
-                Text("Elevate Your Style with ")
-                        .font(.largeTitle .bold())
+                Text("Elevate Style with ")
+                        .font(.title3 .bold())
                     
                     + Text("Outerwear")
-                        .font(.largeTitle .bold())
+                        .font(.title .bold())
                         .foregroundColor(Color(.red))
 
                     Text("Elegance")
-                        .font(.largeTitle .bold())
+                        .font(.title .bold())
             }
         }
         .padding()
@@ -111,7 +107,7 @@ struct Header: View {
 }
 
 
-//#Preview {
-//    HomeView()
-//}
+#Preview {
+    HomeView()
+}
                     

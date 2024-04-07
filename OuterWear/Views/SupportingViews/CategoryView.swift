@@ -5,7 +5,28 @@
 // //  Created by NIBM-LAB04-PC03 on 2024-03-26.
 // //
 
-// import SwiftUI
+import SwiftUI
+
+struct CategoryView: View {
+    @StateObject private var categoryViewModel = CategoryViewModel()
+
+    var body: some View {
+        if categoryViewModel.dataLoaded {
+            List(categoryViewModel.categories) { category in
+                Text(category.name)
+            }
+            .navigationTitle("Categories")
+        } else {
+            ProgressView()
+        }
+    }
+}
+
+
+
+
+
+
 
 // struct CategoryView: View {
 //     var isSelected: Bool = false

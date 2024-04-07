@@ -3,6 +3,7 @@ import Alamofire
 
 class ProductViewModel: ObservableObject {
     @Published var productItems = [ProductModel]()
+    
     @Published var dataLoaded = false
     
     init(){

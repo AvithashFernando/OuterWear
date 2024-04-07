@@ -11,19 +11,19 @@ struct ProductView: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var productViewModel: ProductViewModel
 
-    var column = [GridItem(.adaptive(minimum: 160), spacing: 20)]
+    var column = [GridItem(.adaptive(minimum: 140), spacing: 40)]
     
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: column, spacing: 20) {
+                LazyVGrid(columns: column, spacing: 5) {
                     ForEach(productViewModel.productItems, id: \.id) { product in
-                        //ProductCardView(product: product) // Pass product, not ProductModel
+                        ProductCardView(product: product)
                     }
                 }
                 .padding()
             }
-            .navigationTitle("All New Arrival") // Use navigationTitle, not NavigationTitle
+            .navigationTitle("All New Arrival") 
         }
     }
 }
@@ -35,3 +35,8 @@ struct ProductView_Preview: PreviewProvider {
             .environmentObject(ProductViewModel())
     }
 }
+
+#Preview {
+    ProductView()
+}
+   

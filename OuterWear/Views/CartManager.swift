@@ -12,14 +12,15 @@ class CartManager: ObservableObject {
 
     @Published private(set) var total: Int = 0
 
-//    func addToCart(productViewModel: ProductViewModel) {
-//        id.append(product)
-//        total += product.price
-//    }
-//
-//    func removeFromCart(productViewModel: ProductViewModel) {
-//        products = products.filter { $0.id != productItems.id}  //LKR?
-//        total -= product.price
-//    }
-}
+    func addToCart(product: ProductModel) {
+        cartItems.append(product)
+        total += Int(product.price)
+    }
 
+    func removeFromCart(product: ProductModel) {
+        if let index = cartItems.firstIndex(where: { $0.id == product.id }) {
+            cartItems.remove(at: index)
+            total -= Int(product.price)
+        }
+    }
+}
