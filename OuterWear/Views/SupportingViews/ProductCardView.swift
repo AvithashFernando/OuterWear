@@ -63,7 +63,7 @@ struct ProductCardView: View {
 struct ProductCardView_Preview: PreviewProvider {
     static var previews: some View {
         let productViewModel = ProductViewModel()
-        productViewModel.productItems = [ProductModel(title: "Sample Product", price: 20, description: "Sample Description", category: "Sample Category", gender: "Sample Gender", image: ["sample_image_url"])]
+        productViewModel.productItems = [ProductModel(title: "Silk Saree with blouse piece", price: 3390, description: "Silk Satin Printed Saree With Matching Blouse Piece.Material:Silk Batik.Weight:400g", category: "Dress", gender: "WOMEN", image: ["https://i.ibb.co/McwjTfM/WD1-01.jpg"],color: ["bLUE"],size: ["M"])]
         
         return ProductCardView()
             .environmentObject(productViewModel)

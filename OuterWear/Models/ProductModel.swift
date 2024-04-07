@@ -44,6 +44,8 @@ struct ProductModel: Identifiable,Decodable{
     var category: String
     var gender: String
     var image: [String]
+    var color: [String]
+    var size: [String]
 }
 
 enum CodingKeys: String, CodingKey {
@@ -54,4 +56,6 @@ enum CodingKeys: String, CodingKey {
     case category = "category"
     case gender = "gender"
     case image = "image"
+    case color = "color"
+    case size = "size"
 }

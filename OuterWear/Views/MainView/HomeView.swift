@@ -40,8 +40,8 @@ struct HomeView: View {
                                 NavigationLink {
 //                                    ProductCardView(product: product)
                                 } label: {
-//                                    ProductCardView(product: product)
-//                                        .environmentObject(cartManager)
+                                    ProductCardView()
+                                        .environmentObject(cartManager)
                                 }
                             }
                         }

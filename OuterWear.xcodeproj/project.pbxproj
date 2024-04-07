@@ -28,6 +28,7 @@
 		00ADB1022BBD4E3800056F7E /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADB1012BBD4E3800056F7E /* CategoryView.swift */; };
 		00ADB1042BBD4E6A00056F7E /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADB1032BBD4E6A00056F7E /* PaymentButton.swift */; };
 		00ADB1062BBD4E8E00056F7E /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ADB1052BBD4E8E00056F7E /* ProductCardView.swift */; };
+		253C833E2BC25A2900BAFCFD /* SliderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253C833D2BC25A2900BAFCFD /* SliderModel.swift */; };
 		25A9BCA72BC1394E00DE0E9A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 25A9BCA62BC1394E00DE0E9A /* Alamofire */; };
 		25A9BCA92BC1394E00DE0E9A /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 25A9BCA82BC1394E00DE0E9A /* AlamofireDynamic */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		00ADB1012BBD4E3800056F7E /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		00ADB1032BBD4E6A00056F7E /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
 		00ADB1052BBD4E8E00056F7E /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
+		253C833D2BC25A2900BAFCFD /* SliderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,6 @@
 				00ADB0DC2BBD428300056F7E /* Models */,
 				00ADB0D22BBD421800056F7E /* Assets.xcassets */,
 				00ADB0D42BBD421800056F7E /* Preview Content */,
-				00ADB0EA2BBD433D00056F7E /* CartManager.swift */,
 			);
 			path = OuterWear;
 			sourceTree = "<group>";
@@ -112,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				00ADB0DD2BBD42A400056F7E /* ProductModel.swift */,
+				253C833D2BC25A2900BAFCFD /* SliderModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				00ADB0D02BBD421800056F7E /* ContentView.swift */,
+				00ADB0EA2BBD433D00056F7E /* CartManager.swift */,
 				00ADB0EE2BBD439100056F7E /* MainView */,
 				00ADB0ED2BBD438000056F7E /* SupportingViews */,
 			);
@@ -261,6 +264,7 @@
 				00ADB1042BBD4E6A00056F7E /* PaymentButton.swift in Sources */,
 				00ADB0F42BBD441600056F7E /* SearchView.swift in Sources */,
 				00ADB0F02BBD43C400056F7E /* ImageSliderView.swift in Sources */,
+				253C833E2BC25A2900BAFCFD /* SliderModel.swift in Sources */,
 				00ADB0E12BBD42E500056F7E /* ProductViewModel.swift in Sources */,
 				00ADB0CF2BBD421800056F7E /* OuterWearApp.swift in Sources */,
 				00ADB1002BBD4DFC00056F7E /* CartItemView.swift in Sources */,

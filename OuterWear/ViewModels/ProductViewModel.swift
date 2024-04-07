@@ -15,7 +15,7 @@ class ProductViewModel: ObservableObject {
         AF.request("https://onlineclothingapi.onrender.com/api/products").responseDecodable(of: [ProductModel].self) { response in
             switch response.result {
             case .success(let data):
-                // No need to manually map the data, Alamofire already decodes it
+                
                 self.productItems = data
                 self.dataLoaded = true
                 print(data)
